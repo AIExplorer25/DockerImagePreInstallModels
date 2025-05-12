@@ -32,7 +32,7 @@ huggingface-cli download techparasite/jms --local-dir ./
 mv ${WORKSPACE}/Realism-001.safetensors ${COMFYUI_DIR}/models/checkpoints/Realism-001.safetensors
 unzip ${WORKSPACE}/loras-20250424T074108Z-001.zip -d ${COMFYUI_DIR}/models/
 unzip ${WORKSPACE}/loras-20250424T074108Z-002.zip -d ${COMFYUI_DIR}/models/
-wget -P "${COMFYUI_DIR}/models/unet/project0_real1smV2FP16.safetensors" "https://civitai.com/api/download/models/1591370?type=Model&format=SafeTensor&size=pruned&fp=fp16&token=$CIVITAI_TOKEN"
+wget -O "project0_real1smV2FP16.safetensors" "https://civitai.com/api/download/models/1591370?type=Model&format=SafeTensor&size=pruned&fp=fp16&token=$CIVITAI_TOKEN"
 # Packages are installed after nodes so we can fix them...
 
 APT_PACKAGES=(
@@ -60,6 +60,9 @@ NODES=(
     "https://github.com/ltdrdata/ComfyUI-Inspire-Pack"
     "https://github.com/kijai/ComfyUI-Florence2"
     "https://github.com/pythongosssss/ComfyUI-Custom-Scripts"
+    "https://github.com/Pixelailabs/Save_Florence2_Bulk_Prompts"
+    "https://github.com/supersonic13/ComfyUI-RvTools"
+    
     
 )
 
