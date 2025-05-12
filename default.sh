@@ -6,8 +6,14 @@ COMFYUI_DIR=${WORKSPACE}/ComfyUI
 
 pip install huggingface_hub[hf_transfer]
 pip install hf_transfer
+huggingface-cli login --token $HF_TOKEN
+export HF_HUB_ENABLE_HF_TRANSFER=1
 
 huggingface-cli download Comfy-Org/flux1-dev flux1-dev-fp8.safetensors --local-dir ${COMFYUI_DIR}/models/unet/
+
+huggingface-cli download techparasite/tssa --local-dir ${COMFYUI_DIR}/user/default/workflows/
+
+
 
 huggingface-cli download zer0int/CLIP-GmP-ViT-L-14 ViT-L-14-TEXT-detail-improved-hiT-GmP-HF.safetensors --local-dir ${COMFYUI_DIR}/models/clip/
 huggingface-cli download mcmonkey/google_t5-v1_1-xxl_encoderonly t5xxl_fp8_e4m3fn.safetensors --local-dir ${COMFYUI_DIR}/models/clip/
