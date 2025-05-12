@@ -3,6 +3,27 @@
 source /venv/main/bin/activate
 COMFYUI_DIR=${WORKSPACE}/ComfyUI
 
+
+pip install huggingface_hub[hf_transfer]
+pip install hf_transfer
+
+huggingface-cli download Comfy-Org/flux1-dev flux1-dev-fp8.safetensors --local-dir ${COMFYUI_DIR}/models/unet/
+
+huggingface-cli download zer0int/CLIP-GmP-ViT-L-14 ViT-L-14-TEXT-detail-improved-hiT-GmP-HF.safetensors --local-dir ${COMFYUI_DIR}/models/clip/
+huggingface-cli download mcmonkey/google_t5-v1_1-xxl_encoderonly t5xxl_fp8_e4m3fn.safetensors --local-dir ${COMFYUI_DIR}/models/clip/
+
+huggingface-cli download gemasai/4x_NMKD-Siax_200k --local-dir ${COMFYUI_DIR}/models/upscale_models/
+
+
+huggingface-cli download Phips/4xRealWebPhoto_v4_dat2 4xRealWebPhoto_v4_dat2.safetensors --local-dir ${COMFYUI_DIR}/models/upscale_models/
+
+
+huggingface-cli download techparasite/modellllsss tessa.safetensors --local-dir ${COMFYUI_DIR}/models/loras/
+
+huggingface-cli download black-forest-labs/FLUX.1-schnell ae.safetensors --local-dir ${COMFYUI_DIR}/models/vae/
+
+huggingface-cli download techparasite/jms --local-dir ./
+
 # Packages are installed after nodes so we can fix them...
 
 APT_PACKAGES=(
@@ -26,6 +47,7 @@ WORKFLOWS=(
 
 CHECKPOINT_MODELS=(
     "https://civitai.com/api/download/models/798204?type=Model&format=SafeTensor&size=full&fp=fp16"
+    "https://civitai.com/api/download/models/1591370?type=Model&format=SafeTensor&size=pruned&fp=fp16"
 )
 
 UNET_MODELS=(
