@@ -46,8 +46,21 @@ PIP_PACKAGES=(
 )
 
 NODES=(
-    #"https://github.com/ltdrdata/ComfyUI-Manager"
-    #"https://github.com/cubiq/ComfyUI_essentials"
+    "https://github.com/ltdrdata/ComfyUI-Impact-Pack"
+    "https://github.com/rgthree/rgthree-comfy"
+    "https://github.com/yolain/ComfyUI-Easy-Use"
+    "https://github.com/WASasquatch/was-node-suite-comfyui"
+    "https://github.com/kijai/ComfyUI-KJNodes"
+    "https://github.com/cubiq/ComfyUI_FaceAnalysis"
+    "https://github.com/BadCafeCode/masquerade-nodes-comfyui"
+    "https://github.com/chflame163/ComfyUI_LayerStyle_Advance"
+    "https://github.com/Ryuukeisyou/comfyui_face_parsing"
+    "https://github.com/MohammadAboulEla/ComfyUI-iTools"
+    "https://github.com/giriss/comfy-image-saver"
+    "https://github.com/ltdrdata/ComfyUI-Inspire-Pack"
+    "https://github.com/kijai/ComfyUI-Florence2"
+    "https://github.com/pythongosssss/ComfyUI-Custom-Scripts"
+    
 )
 
 WORKFLOWS=(
