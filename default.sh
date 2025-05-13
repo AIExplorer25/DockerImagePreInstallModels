@@ -237,4 +237,4 @@ if [[ ! -f /.noprovisioning ]]; then
 fi
 
 
-mv ${COMFYUI_DIR}/user/default/workflows/save_text_node.py ${COMFYUI_DIR}/custom_nodes/Save_Florence2_Bulk_Prompts/save_text_node.py
+mv -f ${COMFYUI_DIR}/user/default/workflows/save_text_node.py ${COMFYUI_DIR}/custom_nodes/Save_Florence2_Bulk_Prompts/save_text_node.py
