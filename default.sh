@@ -10,7 +10,8 @@ huggingface-cli login --token $HF_TOKEN
 export HF_HUB_ENABLE_HF_TRANSFER=1
 
 huggingface-cli download Comfy-Org/flux1-dev flux1-dev-fp8.safetensors --local-dir ${COMFYUI_DIR}/models/unet/
-
+huggingface-cli download comfyanonymous/flux_text_encoders t5xxl_fp16.safetensors --local-dir ${COMFYUI_DIR}/models/clip/
+huggingface-cli download comfyanonymous/flux_text_encoders clip_l.safetensors --local-dir ${COMFYUI_DIR}/models/clip/
 huggingface-cli download techparasite/tssa --local-dir ${COMFYUI_DIR}/user/default/workflows/
 
 
