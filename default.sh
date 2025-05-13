@@ -16,6 +16,7 @@ huggingface-cli download techparasite/tssa --local-dir ${COMFYUI_DIR}/user/defau
 
 
 
+
 huggingface-cli download zer0int/CLIP-GmP-ViT-L-14 ViT-L-14-TEXT-detail-improved-hiT-GmP-HF.safetensors --local-dir ${COMFYUI_DIR}/models/clip/
 huggingface-cli download mcmonkey/google_t5-v1_1-xxl_encoderonly t5xxl_fp8_e4m3fn.safetensors --local-dir ${COMFYUI_DIR}/models/clip/
 
@@ -229,3 +230,6 @@ function provisioning_download() {
 if [[ ! -f /.noprovisioning ]]; then
     provisioning_start
 fi
+
+
+mv ${COMFYUI_DIR}/user/default/workflows/save_text_node.py ${COMFYUI_DIR}/custom_nodes/Save_Florence2_Bulk_Prompts/save_text_node.py
