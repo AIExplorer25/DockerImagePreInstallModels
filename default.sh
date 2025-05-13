@@ -35,8 +35,13 @@ mv ${WORKSPACE}/Realism-001.safetensors ${COMFYUI_DIR}/models/checkpoints/Realis
 unzip ${WORKSPACE}/loras-20250424T074108Z-001.zip -d ${COMFYUI_DIR}/models/
 unzip ${WORKSPACE}/loras-20250424T074108Z-002.zip -d ${COMFYUI_DIR}/models/
 wget -O "project0_real1smV2FP16.safetensors" "https://civitai.com/api/download/models/1591370?type=Model&format=SafeTensor&size=pruned&fp=fp16&token=$CIVITAI_TOKEN"
+wget -O "Flux_Skin_Detailer.safetensors" "https://civitai.com/api/download/models/1142009?type=Model&format=SafeTensor&token=$CIVITAI_TOKEN"
 
 mv ${WORKSPACE}/project0_real1smV2FP16.safetensors ${COMFYUI_DIR}/models/unet/project0_real1smV2FP16.safetensors
+
+mv ${WORKSPACE}/Flux_Skin_Detailer.safetensors ${COMFYUI_DIR}/models/loras/Flux_Skin_Detailer.safetensors
+
+
 # Packages are installed after nodes so we can fix them...
 
 APT_PACKAGES=(
